@@ -11,7 +11,8 @@ import java.util.Collections;
 public class PassengerDaoFileImpl implements PassengerDao {
 
     private ArrayList<Passenger> passengers = new ArrayList<>();
-    private static final String FILE_NAME = "src/main/resources/passengers.dat";
+
+    private static final String FILE_NAME = "./passengers.dat";
 
     @Override
     public void add(Passenger passenger) {

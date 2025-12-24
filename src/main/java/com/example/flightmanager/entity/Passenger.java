@@ -1,5 +1,6 @@
 package com.example.flightmanager.entity;
 
+import com.example.flightmanager.util.IdGenerator;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -9,6 +10,11 @@ public class Passenger implements Serializable, Comparable<Passenger> {
 
     private int id;
     private String name;
+
+    public Passenger(String name) {
+        this.id = IdGenerator.nextPassengerId();
+        this.name = name;
+    }
 
     public Passenger(int id, String name) {
         this.id = id;
